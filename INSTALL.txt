@@ -1,0 +1,31 @@
+Copy the dd-ci-vendorlibs distribution files:
+
+    cp dd-ci-vendorlibs/application/hooks/*.php \
+        path/to/your/system/application/hooks/
+
+    cp dd-ci-vendorlibs/application/config/*.php \
+        path/to/your/system/application/config/
+
+Modify path/to/system/application/config/hooks.php and add the following:
+
+    $hook['pre_system'][] = array(
+        'class' => 'dd_ci_vendorlibs_hooks_PreSystem',
+        'function' => 'preSystem',
+        'filename' => 'dd_ci_vendorlibs_hooks_PreSystem.php',
+        'filepath' => 'hooks'
+    );
+
+
+Create a system and/or application vendors folders.
+
+For libraries used by potentially more than one CodeIgniter application, create
+a vendors/lib folder under BASEDIR:
+
+    mkdir -p path/to/your/system/vendors/lib
+
+
+For libraries used by a specific application, create a vendors/lib folder under
+APPPATH:
+
+    mkdir -p path/to/your/system/application/vendors/lib
+
