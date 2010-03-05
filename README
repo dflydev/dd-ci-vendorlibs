@@ -1,0 +1,29 @@
+Dragonfly Development's Vendor Libs CodeIgniter Add-On
+http://github.com/dflydev/dd-ci-vendorlibs
+
+
+This Vendor Libs add-on for CodeIgniter is intended to allow for easily
+adding third party (vendor) packages to the include path without
+requiring one to modify the include path.
+
+The implementation involves a pre-system hook and a standardized placement
+of vendor libraries.
+
+    APPPATH . 'vendors'
+    BASEDIR . 'vendors'
+
+Every directory inside of either of these two directories will be added
+to the PHP include path. For example:
+
+    system/application/vendors/fancy-orm/Orm.php
+
+In this case, 'system/application/vendors/fancy-orm' will be added to the
+include path and one will be able to require 'Orm.php' with either of the
+following:
+
+    require 'Orm.php';
+    require 'fancy-orm/Orm.php';
+
+
+Inspired by CakePHP's Vendor concept.
+http://book.cakephp.org/view/538/Loading-Vendor-Files
