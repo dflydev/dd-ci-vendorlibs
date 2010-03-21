@@ -1,10 +1,9 @@
-Dragonfly Development's Vendor Libs CodeIgniter Add-On
-http://github.com/dflydev/dd-ci-vendorlibs
+vendorlibs - Dragonfly Development's Vendor Libs CodeIgniter Add-On
+http://code.google.com/p/dd-ci-vendorlibs/
 
 
-This Vendor Libs add-on for CodeIgniter is intended to allow for easily
-adding third party (vendor) packages to the include path without
-requiring one to modify the include path.
+vendorlibs for CodeIgniter is intended to allow for easily adding third party
+(vendor) libraries to the include path.
 
 The implementation involves a pre-system hook and a standardized placement
 of vendor libraries.

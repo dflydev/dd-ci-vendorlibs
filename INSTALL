@@ -1,10 +1,10 @@
 Copy the dd-ci-vendorlibs distribution files:
 
-    cp dd-ci-vendorlibs/application/hooks/*.php \
-        path/to/your/system/application/hooks/
+    cp dd-ci-vendorlibs/application/hooks/dd_ci_vendorlibs_hooks_PreSystem.php \
+        system/application/hooks/
 
-    cp dd-ci-vendorlibs/application/config/*.php \
-        path/to/your/system/application/config/
+    cp dd-ci-vendorlibs/application/config/dd_ci_vendorlibs.php \
+        system/application/config/
 
 Modify path/to/system/application/config/hooks.php and add the following:
 
