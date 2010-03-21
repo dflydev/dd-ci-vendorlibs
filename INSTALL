@@ -4,18 +4,21 @@ http://code.google.com/p/dd-ci-vendorlibs/
 
 Copy the dd-ci-vendorlibs distribution files:
 
-    cp dd-ci-vendorlibs/application/hooks/dd_ci_vendorlibs_hooks_PreSystem.php \
+    cp dd-ci-vendorlibs/application/hooks/vendorlibs.php \
         system/application/hooks/
 
-    cp dd-ci-vendorlibs/application/config/dd_ci_vendorlibs.php \
+    cp dd-ci-vendorlibs/application/config/vendorlibs.php \
+        system/application/config/
+
+    cp dd-ci-vendorlibs/application/config/vendorlibs_site.example.php \
         system/application/config/
 
 Modify path/to/system/application/config/hooks.php and add the following:
 
     $hook['pre_system'][] = array(
-        'class' => 'dd_ci_vendorlibs_hooks_PreSystem',
+        'class' => 'dd_ci_VendorLibs',
         'function' => 'preSystem',
-        'filename' => 'dd_ci_vendorlibs_hooks_PreSystem.php',
+        'filename' => 'vendorlibs.php',
         'filepath' => 'hooks'
     );
 
