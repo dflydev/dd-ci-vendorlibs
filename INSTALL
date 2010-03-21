@@ -1,3 +1,7 @@
+vendorlibs - Dragonfly Development's Vendor Libs CodeIgniter Add-On
+http://code.google.com/p/dd-ci-vendorlibs/
+
+
 Copy the dd-ci-vendorlibs distribution files:
 
     cp dd-ci-vendorlibs/application/hooks/dd_ci_vendorlibs_hooks_PreSystem.php \
